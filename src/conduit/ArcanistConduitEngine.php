@@ -78,13 +78,13 @@ final class ArcanistConduitEngine
     $list = id(new PhutilConsoleList())
       ->addItem(
         pht(
-          'Run in a working copy with "phabricator.uri" set in ".arcconfig".'))
+          'Run in a working copy with "phorge.uri" set in ".arcconfig".'))
       ->addItem(
         pht(
-          'Set a default URI with `arc set-config phabricator.uri <uri>`.'))
+          'Set a default URI with `arc set-config phorge.uri <uri>`.'))
       ->addItem(
         pht(
-          'Specify a URI explicitly with `--config phabricator.uri=<uri>`.'));
+          'Specify a URI explicitly with `--config phorge.uri=<uri>`.'));
 
     $block = id(new PhutilConsoleBlock())
       ->addParagraph(

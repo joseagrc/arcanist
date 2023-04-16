@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Browse files or objects in the Phabricator web interface.
+ * Browse files or objects in the Phorge web interface.
  */
 final class ArcanistBrowseWorkflow
   extends ArcanistArcWorkflow {

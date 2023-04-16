@@ -22,7 +22,7 @@
  * @{function:phutil_error_listener_example}. Providing a listener is optional,
  * you will benefit from improved error logs even without one.
  *
- * Phabricator uses this class to drive the DarkConsole "Error Log" plugin.
+ * Phorge uses this class to drive the DarkConsole "Error Log" plugin.
  *
  * @task config   Configuring Error Dispatch
  * @task exutil   Exception Utilities
@@ -197,7 +197,7 @@ final class PhutilErrorHandler extends Phobject {
     // See T13499. If this is a user error arising from "trigger_error()" or
     // similar, route it through normal error handling: this is probably the
     // best match to authorial intent, since the code could choose to throw
-    // an exception instead if it wanted that behavior. Phabricator does not
+    // an exception instead if it wanted that behavior. Phorge does not
     // use "trigger_error()" so we never normally expect to reach this
     // block in first-party code.
 
@@ -461,7 +461,7 @@ final class PhutilErrorHandler extends Phobject {
       switch ($library) {
         case 'arcanist':
         case 'phorge':
-        case 'phabricator':
+        case 'phorge':
           $root = dirname($root);
           break;
       }

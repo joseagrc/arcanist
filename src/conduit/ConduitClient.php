@@ -141,7 +141,7 @@ final class ConduitClient extends Phobject {
       'params'      => json_encode($params),
       'output'      => 'json',
 
-      // This is a hint to Phabricator that the client expects a Conduit
+      // This is a hint to Phorge that the client expects a Conduit
       // response. It is not necessary, but provides better error messages in
       // some cases.
       '__conduit__' => true,

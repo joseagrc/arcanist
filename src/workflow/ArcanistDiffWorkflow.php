@@ -2112,7 +2112,7 @@ EOTEXT
     // which can be very slow for large diffs. If we can, try to use
     // "differential.diff.search" instead.
 
-    // We expect this to fail if the Phabricator version on the server is
+    // We expect this to fail if the Phorge version on the server is
     // older than April 2018 (D19386), which introduced the "commits"
     // attachment for "differential.revision.search".
 
@@ -2674,7 +2674,7 @@ EOTEXT
     }
 
     $commit = $api->getHeadCommit();
-    $prefix = idx($staging, 'prefix', 'phabricator');
+    $prefix = idx($staging, 'prefix', 'phorge');
 
     $base_tag = "refs/tags/{$prefix}/base/{$id}";
     $diff_tag = "refs/tags/{$prefix}/diff/{$id}";

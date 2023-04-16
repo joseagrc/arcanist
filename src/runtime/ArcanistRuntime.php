@@ -725,7 +725,7 @@ final class ArcanistRuntime {
     if ($force_uri !== null) {
       $conduit_uri = $force_uri;
     } else {
-      $conduit_uri = $config->getConfig('phabricator.uri');
+      $conduit_uri = $config->getConfig('phorge.uri');
       if ($conduit_uri === null) {
         // For now, read this older config from raw storage. There is currently
         // no definition of this option in the "toolsets" config list, and it
@@ -739,7 +739,7 @@ final class ArcanistRuntime {
 
     if ($conduit_uri) {
       // Set the URI path to '/api/'. TODO: Originally, I contemplated letting
-      // you deploy Phabricator somewhere other than the domain root, but ended
+      // you deploy Phorge somewhere other than the domain root, but ended
       // up never pursuing that. We should get rid of all "/api/" silliness
       // in things users are expected to configure. This is already happening
       // to some degree, e.g. "arc install-certificate" does it for you.

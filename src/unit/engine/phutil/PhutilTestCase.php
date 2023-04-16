@@ -795,7 +795,7 @@ abstract class PhutilTestCase extends Phobject {
   final protected function getLink($method) {
     $base_uri = $this
       ->getWorkingCopy()
-      ->getProjectConfig('phabricator.uri');
+      ->getProjectConfig('phorge.uri');
 
     $uri = id(new PhutilURI($base_uri))
       ->setPath("/diffusion/symbol/{$method}/")

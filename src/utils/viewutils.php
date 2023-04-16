@@ -21,7 +21,7 @@ function phutil_format_relative_time($duration) {
 
 /**
  * Format a relative time (duration) into weeks, days, hours, minutes,
- * seconds, but unlike phabricator_format_relative_time, does so for more than
+ * seconds, but unlike phorge_format_relative_time, does so for more than
  * just the largest unit.
  *
  * @param int Duration in seconds.

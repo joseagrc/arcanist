@@ -83,7 +83,7 @@ final class ArcanistArcConfigurationEngineExtension
             '123',
           )),
       id(new ArcanistStringConfigOption())
-        ->setKey('phabricator.uri')
+        ->setKey('phorge.uri')
         ->setAliases(
           array(
             'conduit_uri',

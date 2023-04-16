@@ -124,7 +124,7 @@ final class ArcanistRepositoryRef
     }
 
     // TODO: It would be nice to unify evaluation of permanent ref rules
-    // across Arcanist and Phabricator.
+    // across Arcanist and Phorge.
 
     $ref_name = $ref->getName();
     foreach ($rules as $rule) {

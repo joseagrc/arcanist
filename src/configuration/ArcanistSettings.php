@@ -41,7 +41,7 @@ final class ArcanistSettings extends Phobject {
           'desired value is.',
           'arc'),
       ),
-      'phabricator.uri' => array(
+      'phorge.uri' => array(
         'type' => 'string',
         'legacy' => 'conduit_uri',
         'example' => '"https://devtools.example.com/"',

@@ -191,7 +191,7 @@ final class PhutilBootloader {
   }
 
   public function getLibraryRoot($name) {
-    if ($name === 'phabricator') {
+    if ($name === 'phorge') {
       // TODO warning
       $name = 'phorge';
     }

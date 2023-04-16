@@ -136,8 +136,8 @@ abstract class PhutilExecutableFuture extends Future {
       // $_ENV and no longer need to do this.
 
       $known_keys = array(
-        'PHABRICATOR_ENV',
-        'PHABRICATOR_INSTANCE',
+        'PHORGE_ENV',
+        'PHORGE_INSTANCE',
       );
 
       foreach ($known_keys as $known_key) {

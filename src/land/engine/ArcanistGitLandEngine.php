@@ -1685,7 +1685,7 @@ final class ArcanistGitLandEngine
         'configuration is ambiguous under this behavioral change. '.
         '(Use "--strategy" or configure "arc.land.strategy" to bypass '.
         'this check.)',
-        'https://secure.phabricator.com/T13547'));
+        'https://secure.phorge.com/T13547'));
 
     throw new PhutilArgumentUsageException(
       pht(

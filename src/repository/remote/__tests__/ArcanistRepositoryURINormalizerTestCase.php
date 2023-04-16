@@ -32,8 +32,8 @@ final class ArcanistRepositoryURINormalizerTestCase
   }
 
   public function testDomainURINormalizer() {
-    $base_domain = 'base.phabricator.example.com';
-    $ssh_domain = 'ssh.phabricator.example.com';
+    $base_domain = 'base.phorge.example.com';
+    $ssh_domain = 'ssh.phorge.example.com';
 
     $domain_map = array(
       '<base-uri>' => $base_domain,

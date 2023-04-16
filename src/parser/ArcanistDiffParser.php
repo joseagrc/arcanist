@@ -1261,7 +1261,7 @@ final class ArcanistDiffParser extends Phobject {
         $diff = $repository_api->getRawDiffText($path, $moves = false);
 
         // NOTE: We're reusing the parser and it doesn't reset change state
-        // between parses because there's an oddball SVN workflow in Phabricator
+        // between parses because there's an oddball SVN workflow in Phorge
         // which relies on being able to inject changes.
         // TODO: Fix this.
         $parser = clone $this;

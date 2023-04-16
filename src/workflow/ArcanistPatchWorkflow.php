@@ -392,7 +392,7 @@ EOTEXT
       }
     } catch (ConduitClientException $ex) {
       if ($ex->getErrorCode() == 'ERR-INVALID-SESSION') {
-        // Phabricator is not configured to allow anonymous access to
+        // Phorge is not configured to allow anonymous access to
         // Differential.
         $this->authenticateConduit();
         return $this->run();
@@ -1127,7 +1127,7 @@ EOTEXT
       if ($revisions) {
         $revision = head($revisions);
         $rev_auxiliary = idx($revision, 'auxiliary', array());
-        $phids = idx($rev_auxiliary, 'phabricator:depends-on', array());
+        $phids = idx($rev_auxiliary, 'phorge:depends-on', array());
         if ($phids) {
           $revision_phid = $revision['phid'];
           $graph = id(new ArcanistDifferentialDependencyGraph())

@@ -153,7 +153,7 @@ final class ArcanistRevisionRef
     if ($uri === null) {
       // TODO: The "uri" field was added at the same time as this callsite,
       // so we may not have it yet if the server is running an older version
-      // of Phabricator. Fake our way through.
+      // of Phorge. Fake our way through.
 
       $uri = '/'.$this->getMonogram();
     }

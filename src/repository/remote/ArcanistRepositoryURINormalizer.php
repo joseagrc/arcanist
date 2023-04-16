@@ -122,7 +122,7 @@ final class ArcanistRepositoryURINormalizer
         break;
     }
 
-    // If this is a Phabricator URI, strip it down to the callsign. We mutably
+    // If this is a Phorge URI, strip it down to the callsign. We mutably
     // allow you to clone repositories as "/diffusion/X/anything.git", for
     // example.
 

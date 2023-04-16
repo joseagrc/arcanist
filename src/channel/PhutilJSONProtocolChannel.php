@@ -4,7 +4,7 @@
  * Channel that transmits dictionaries of primitives using JSON serialization.
  * This channel is not binary safe.
  *
- * This protocol is implemented by the Phabricator Aphlict realtime notification
+ * This protocol is implemented by the Phorge Aphlict realtime notification
  * server.
  *
  * @task protocol Protocol Implementation

@@ -1,4 +1,4 @@
-diff --git a/webroot/rsrc/image/phabricator_logo.png b/webroot/rsrc/image/phabricator_logo.png
+diff --git a/webroot/rsrc/image/phorge_logo.png b/webroot/rsrc/image/phorge_logo.png
 index a491a6055dfa879978675797e9be60d61bf6bf71..f4cf0312ff4b6ee34867055355c1b3f706fd9600 100644
 GIT binary patch
 literal 826

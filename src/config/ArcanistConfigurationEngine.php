@@ -81,7 +81,7 @@ final class ArcanistConfigurationEngine
   private function getSystemConfigurationFilePath() {
     if (phutil_is_windows()) {
       return Filesystem::resolvePath(
-        'Phabricator/Arcanist/config',
+        'Phorge/Arcanist/config',
         getenv('ProgramData'));
     } else {
       return '/etc/arcconfig';

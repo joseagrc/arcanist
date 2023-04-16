@@ -11,7 +11,7 @@ new file mode 100644
 @@ -0,0 +1,5 @@
 +{
 +  "project_id" : "TestProject",
-+  "conduit_uri" : "http://phabricator.example.com/",
++  "conduit_uri" : "http://phorge.example.com/",
 +  "history.immutable" : true
 +}
 

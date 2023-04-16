@@ -288,7 +288,7 @@ final class ArcanistConfigurationManager extends Phobject {
   public function getSystemArcConfigLocation() {
     if (phutil_is_windows()) {
       return Filesystem::resolvePath(
-        'Phabricator/Arcanist/config',
+        'Phorge/Arcanist/config',
         getenv('ProgramData'));
     } else {
       return '/etc/arcconfig';

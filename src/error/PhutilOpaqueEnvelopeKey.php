@@ -33,7 +33,7 @@ final class PhutilOpaqueEnvelopeKey extends Phobject {
       // of security aren't terribly important here and it allows us to use
       // envelopes on systems which don't have a strong random source. Notably,
       // this lets us make it to the readability check for `/dev/urandom` in
-      // Phabricator on systems where we can't read it.
+      // Phorge on systems where we can't read it.
       self::$key = '';
       for ($ii = 0; $ii < 8; $ii++) {
         self::$key .= md5(mt_rand(), $raw_output = true);

@@ -6,7 +6,7 @@
  * = Managing Conduit =
  *
  * Workflows have the builtin ability to open a Conduit connection to a
- * Phabricator installation, so methods can be invoked over the API. Workflows
+ * Phorge installation, so methods can be invoked over the API. Workflows
  * may either not need this (e.g., "help"), or may need a Conduit but not
  * authentication (e.g., calling only public APIs), or may need a Conduit and
  * authentication (e.g., "arc diff").
@@ -31,7 +31,7 @@
  *
  * @task  conduit   Conduit
  * @task  scratch   Scratch Files
- * @task  phabrep   Phabricator Repositories
+ * @task  phabrep   Phorge Repositories
  */
 abstract class ArcanistWorkflow extends Phobject {
 
@@ -434,7 +434,7 @@ abstract class ArcanistWorkflow extends Phobject {
 
 
   /**
-   * Open and authenticate a conduit connection to a Phabricator server using
+   * Open and authenticate a conduit connection to a Phorge server using
    * provided credentials. Normally, Arcanist does this for you automatically
    * when you return true from @{method:requiresAuthentication}, but you can
    * also upgrade an existing workflow to one with an authenticated conduit
@@ -1861,11 +1861,11 @@ abstract class ArcanistWorkflow extends Phobject {
   }
 
 
-/* -(  Phabricator Repositories  )------------------------------------------- */
+/* -(  Phorge Repositories  )------------------------------------------- */
 
 
   /**
-   * Get the PHID of the Phabricator repository this working copy corresponds
+   * Get the PHID of the Phorge repository this working copy corresponds
    * to. Returns `null` if no repository can be identified.
    *
    * @return phid|null  Repository PHID, or null if no repository can be
@@ -1878,7 +1878,7 @@ abstract class ArcanistWorkflow extends Phobject {
   }
 
   /**
-   * Get the name of the Phabricator repository this working copy
+   * Get the name of the Phorge repository this working copy
    * corresponds to. Returns `null` if no repository can be identified.
    *
    * @return string|null  Repository name, or null if no repository can be
@@ -1892,7 +1892,7 @@ abstract class ArcanistWorkflow extends Phobject {
 
 
   /**
-   * Get the URI of the Phabricator repository this working copy
+   * Get the URI of the Phorge repository this working copy
    * corresponds to. Returns `null` if no repository can be identified.
    *
    * @return string|null  Repository URI, or null if no repository can be
@@ -1912,7 +1912,7 @@ abstract class ArcanistWorkflow extends Phobject {
 
   /**
    * Get human-readable reasoning explaining how `arc` evaluated which
-   * Phabricator repository corresponds to this working copy. Used by
+   * Phorge repository corresponds to this working copy. Used by
    * `arc which` to explain the process to users.
    *
    * @return list<string> Human-readable explanation of the repository
@@ -2209,15 +2209,15 @@ abstract class ArcanistWorkflow extends Phobject {
 
 
   /**
-   * Ask Phabricator to update the current repository as soon as possible.
+   * Ask Phorge to update the current repository as soon as possible.
    *
-   * Calling this method after pushing commits allows Phabricator to discover
+   * Calling this method after pushing commits allows Phorge to discover
    * the commits more quickly, so the system overall is more responsive.
    *
    * @return void
    */
   protected function askForRepositoryUpdate() {
-    // If we know which repository we're in, try to tell Phabricator that we
+    // If we know which repository we're in, try to tell Phorge that we
     // pushed commits to it so it can update. This hint can help pull updates
     // more quickly, especially in rarely-used repositories.
     if ($this->getRepositoryPHID()) {
@@ -2229,7 +2229,7 @@ abstract class ArcanistWorkflow extends Phobject {
           ));
       } catch (ConduitClientException $ex) {
         // If we hit an exception, just ignore it. Likely, we are running
-        // against a Phabricator which is too old to support this method.
+        // against a Phorge which is too old to support this method.
         // Since this hint is purely advisory, it doesn't matter if it has
         // no effect.
       }

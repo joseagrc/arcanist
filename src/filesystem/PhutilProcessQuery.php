@@ -42,7 +42,7 @@ final class PhutilProcessQuery
       $ref->setArgv($argv);
 
       // If this is an overseer and the command has a "-l" ("Label") argument,
-      // the argument contains the "PHABRICATOR_INSTANCE" value for the daemon.
+      // the argument contains the "PHORGE_INSTANCE" value for the daemon.
       // Parse it out and annotate the process.
       $instance = null;
       if ($ref->getIsOverseer()) {

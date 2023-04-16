@@ -46,7 +46,7 @@ function phlog($value/* , ... */) {
  *
  * NOTE: @{class:PhutilErrorHandler} handles writing messages to the error
  * log, so you only need to provide a listener if you have some other console
- * (like Phabricator's DarkConsole) which you //also// want to send errors to.
+ * (like Phorge's DarkConsole) which you //also// want to send errors to.
  *
  * NOTE: You will receive errors which were silenced with the `@` operator. If
  * you don't want to display these, test for `@` being in effect by checking if

@@ -8,7 +8,7 @@
  * edges the user is trying to create) using @{method:addNodes}, then
  * call @{method:loadGraph} to construct the graph.
  *
- *   $detector = new ExamplePhabricatorGraphCycleDetector();
+ *   $detector = new ExamplePhorgeGraphCycleDetector();
  *   $detector->addNodes(
  *     array(
  *       $object->getPHID() => $object->getChildPHIDs(),

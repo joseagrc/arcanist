@@ -13,9 +13,9 @@ final class PhutilBacktraceSignalHandler extends PhutilSignalHandler {
   public function handleSignal(PhutilSignalRouter $router, $signo) {
     $e = new Exception();
     $pid = getmypid();
-    // Some Phabricator daemons may not be attached to a terminal.
+    // Some Phorge daemons may not be attached to a terminal.
     Filesystem::writeFile(
-      sys_get_temp_dir().'/phabricator_backtrace_'.$pid,
+      sys_get_temp_dir().'/phorge_backtrace_'.$pid,
       $e->getTraceAsString());
   }
 

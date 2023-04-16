@@ -49,7 +49,7 @@ final class ArcanistDifferentialDependencyGraph extends AbstractDirectedGraph {
       $auxillary = idx($dependency, 'auxiliary', array());
       $edges[$dependency['phid']] = idx(
         $auxillary,
-        'phabricator:depends-on',
+        'phorge:depends-on',
         array());
     }
     return $edges;

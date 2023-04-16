@@ -36,7 +36,7 @@
  *
  * ...which will show you all the lint issues raised in the file.
  *
- * See @{article@phabricator:Arcanist User Guide: Customizing Lint, Unit Tests
+ * See @{article@phorge:Arcanist User Guide: Customizing Lint, Unit Tests
  * and Workflows} for more information about configuring lint engines.
  */
 abstract class ArcanistLintEngine extends Phobject {

@@ -54,7 +54,7 @@ function __arcanist_init_script__() {
     // See PHI1894. This option was introduced in PHP 7.4, and removes the
     // "args" value from exception backtraces. We have some unit tests which
     // inspect "args", and this option generally obscures useful debugging
-    // information without any benefit in the context of Phabricator.
+    // information without any benefit in the context of Phorge.
     'zend.exception_ignore_args' => 0,
 
     // See T13100. We'd like the regex engine to fail, rather than segfault,
@@ -62,8 +62,8 @@ function __arcanist_init_script__() {
     'pcre.backtrack_limit' => 10000,
     'pcre.recusion_limit' => 10000,
 
-    // NOTE: Phabricator applies a similar set of startup options for Web
-    // environments in "PhabricatorStartup". Changes here may also be
+    // NOTE: Phorge applies a similar set of startup options for Web
+    // environments in "PhorgeStartup". Changes here may also be
     // appropriate to apply there.
   );
 
